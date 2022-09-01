@@ -1,0 +1,81 @@
+.container{
+    height: calc(100vh - 40px);
+    width: 100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.formStyle{
+    background-color: #fff;
+    max-width: 600px;
+    width: 100%;
+    padding: 1em 2em;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.5em;
+    box-shadow: -3px 2px 16px 0 rgba(0, 0, 0, 0.4)
+}
+.formStyle h2{
+    font-weight: 500;
+    font-size: 2rem;
+
+}
+.formStyle label,
+.formStyle input,
+.formStyle textarea{
+    display: block;
+    margin-top: 0.6em; 
+}
+.formStyle input,
+.formStyle textarea{
+    margin: 0.1em 0;
+    width: 100%;
+    resize:none;
+    padding: 0.6em 0.8em;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+.formStyle textarea{
+    margin-bottom: 0.6em;
+}
+.formStyle input:focus:not(.requiredInput input),
+.formStyle textarea:focus{
+    transition: ease-in-out .3s;
+    outline: none;
+    border: 1px solid rgb(25, 0, 255);
+    box-shadow: 0 0 2px 1px rgba(24, 148, 242, 0.4)
+}
+.formStyle button{
+    color: #fff;
+    background-color: #666;
+    border: 2px solid #aaa;
+    cursor: pointer;
+    padding: 0.5em 0;
+    border-radius: 0.5em;
+    max-width: 100px;
+}
+.formStyle button:hover{
+    transition: ease-in-out 0.3s;
+    background-color: #444;
+    border: 2px solid #666;
+}
+.requiredInput input{
+    border: 1px solid rgb(223, 19, 19);
+    box-shadow: 0 0 1px 1px rgba(238, 17, 39, 0.4);
+    outline: none;
+}
+.requiredInput input:focus{
+    transition: ease .3s;
+    box-shadow: 0 0 1px 1px rgba(238, 17, 39, 0.7);
+}
+.requiredInput::after{
+    content: 'Required';
+    color: rgb(223, 19, 19);
+    font-size: 10px;
+}
+.requireWarning::after{
+    content: 'A required field is missing';
+    color: rgb(223, 19, 19);
+    font-size: 12px;
+}

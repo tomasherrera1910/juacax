@@ -1,0 +1,45 @@
+.container{
+    height: calc(100vh - 40px);
+    width: 100vw;
+    display:flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+.table{
+    box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    width: 90%;
+    max-width: 600px;
+    min-height: 200px;
+    text-align: center;
+    font-weight: 800;
+}
+.table td{
+    width: calc(600px / 9);
+}
+.table,
+.table tr,
+.table td
+{
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+.container button{
+    color: #fff;
+    background-color: #666;
+    border: 2px solid #aaa;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    max-width: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+}
+.container button:hover{
+    transition: ease-in-out 0.3s;
+    background-color: #444;
+    border: 2px solid #666;
+}
